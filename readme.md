@@ -1,4 +1,7 @@
-NOT PRODUCTION READY. NOT AUDITED. DON'T USE. 
+A very simple script for an NFT commity-reveal scheme. 
 
-1. load the test trait file in shuffler, run it, it outputs the shuffled_traits CSV
-2. run the traits_to_json.ipynb notebook to output metadata to /metadata folder
+Prior to usage, commit unshuffled NFT metadata to ERC-721 smart contract and upload all images.
+
+Uses the VRF to generate a seed. Then use pandas to shuffle pre-committed metadata. Then convert shuffled metadata to JSON which is uploaded to IPFS. Then call setBaseURI on the NFT to change metadata to the shuffled data. 
+
+Check our Medium post for more details: https://medium.com/@convexlabs/how-to-verify-that-honestnft-vigilantes-are-randomly-distributed-2592665c5c72
